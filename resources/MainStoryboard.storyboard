@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="11">
+            <objects>
+                <navigationController id="3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="12" kind="relationship" relationship="rootViewController" id="19"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="64"/>
+        </scene>
+        <!--Products View Controller - Master-->
+        <scene sceneID="18">
+            <objects>
+                <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="ProductsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="168" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductCell" rowHeight="168" id="lJ0-d7-vTF" customClass="ProductViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="168"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGF-OI-6lD">
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="83" id="Hup-JF-FAE"/>
+                                                <constraint firstAttribute="width" constant="244" id="hXg-ce-UxQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" text="$ 22.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77A-Wa-0EU">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="162" id="4iR-9d-awR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ZGF-OI-6lD" firstAttribute="leading" secondItem="lJ0-d7-vTF" secondAttribute="leading" constant="43" id="57P-KP-3ry"/>
+                                    <constraint firstItem="77A-Wa-0EU" firstAttribute="top" secondItem="lJ0-d7-vTF" secondAttribute="top" constant="55" id="JWp-iF-eqb"/>
+                                    <constraint firstItem="77A-Wa-0EU" firstAttribute="leading" secondItem="lJ0-d7-vTF" secondAttribute="leading" constant="96" id="R4a-CF-UN0"/>
+                                    <constraint firstItem="ZGF-OI-6lD" firstAttribute="top" secondItem="lJ0-d7-vTF" secondAttribute="top" constant="9" id="aI4-ej-DnM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="picture" destination="ZGF-OI-6lD" id="6RG-V7-baa"/>
+                                    <outlet property="price" destination="77A-Wa-0EU" id="jhC-Ba-CL0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="12" id="16"/>
+                            <outlet property="delegate" destination="12" id="15"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Master" id="36"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Cpl-L1-7xz"/>
+                <swipeGestureRecognizer direction="right" id="IRR-Qn-EvJ"/>
+                <swipeGestureRecognizer direction="right" id="1Nu-nH-Yd3"/>
+                <swipeGestureRecognizer direction="right" id="aeK-Sj-3dl"/>
+            </objects>
+            <point key="canvasLocation" x="459" y="64"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ProductViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProductViewCell.h"/>
+            <relationships>
+                <relationship kind="action" name="next_image"/>
+                <relationship kind="action" name="refresh_image"/>
+                <relationship kind="action" name="setup:"/>
+                <relationship kind="outlet" name="info" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="price" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ProductsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProductsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="viewDidLoad"/>
+                <relationship kind="action" name="viewWillAppear:"/>
+            </relationships>
+        </class>
+        <class className="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIView.h"/>
+            <relationships>
+                <relationship kind="action" name="handle_gesture:"/>
+            </relationships>
+        </class>
+        <class className="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="content_frame"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
