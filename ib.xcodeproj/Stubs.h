@@ -242,17 +242,6 @@
 @end
 
 
-@interface ProductViewController: UIViewController
-
-@property IBOutlet UILabel * name;
-
-
-
--(IBAction) viewDidLoad;
-
-@end
-
-
 @interface ProductsViewController: UITableViewController
 
 
@@ -261,6 +250,20 @@
 
 -(IBAction) viewDidLoad;
 -(IBAction) viewWillAppear:(id) animated;
+
+@end
+
+
+@interface ShowProductViewController: UITableViewController
+
+@property IBOutlet UILabel * name;
+@property IBOutlet UIImageView * picture;
+
+
+
+-(IBAction) setup:(id) product;
+-(IBAction) next_image;
+-(IBAction) refresh_image;
 
 @end
 

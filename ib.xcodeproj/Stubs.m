@@ -93,12 +93,12 @@
 @end
 
 
-@implementation ProductViewController
+@implementation ProductsViewController
 
 @end
 
 
-@implementation ProductsViewController
+@implementation ShowProductViewController
 
 @end
 

@@ -6,10 +6,6 @@ class ProductsViewController < UITableViewController
     view.dataSource = view.delegate = self
   end
 
-  def prepareForSegue(segue, sender: sender)
-    segue.destinationViewController.setFilter segue.identifier
-  end 
-
   def viewWillAppear(animated)
     Backend.new.loadProducts do | operation, result |
       @resources = result.array

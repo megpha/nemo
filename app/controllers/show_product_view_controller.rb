@@ -1,19 +1,14 @@
-class ProductViewCell < UITableViewCell
+class ShowProductViewController < UITableViewController 
   extend IB
 
   outlet :name, UILabel
-  outlet :info, UILabel
-  outlet :price, UILabel
   outlet :picture, UIImageView
+  attr_accessor :product, :image_index
 
-  attr_accessor :product
-  attr_accessor :image_index
-
-  def setup(product)
-    self.product    = product
+  def viewDidLoad
     self.name.text  = product.name
     #self.info.text  = product.info
-    self.price.text  = product.cost
+    #self.price.text  = product.cost
     self.image_index = 0
 
     refresh_image
