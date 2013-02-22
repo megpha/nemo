@@ -9,7 +9,7 @@ class Backend
   end
 
   def initialize
-    url = NSURL.URLWithString("http://localhost:3000")
+    url = NSURL.URLWithString('http://nimbleshop-demo-simply.herokuapp.com')
     @backend = RKObjectManager.managerWithBaseURL(url)
 
     add_response_mapping(product_mapping, "product")
