@@ -41,7 +41,6 @@ class ShowProductViewController < UITableViewController
 
   def refresh_image
     url = product.images[image_index]
-    image = UIImage.alloc.initWithData(NSData.dataWithContentsOfURL(NSURL.URLWithString(url)))
-    self.picture.image = image
+    self.picture.image = Product.to_image(url) 
   end
 end

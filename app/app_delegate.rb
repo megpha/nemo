@@ -1,6 +1,9 @@
 class AppDelegate
-  attr_accessor :order
+  attr_accessor :order, :remote_url
   def application(application, didFinishLaunchingWithOptions:launchOptions)
+    self.order = Order.new
+    self.remote_url = 'http://nimbleshop-demo-simply.herokuapp.com'
+
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
 
     @storyboard ||= UIStoryboard.storyboardWithName('MainStoryboard', bundle:NSBundle.mainBundle)
@@ -10,8 +13,6 @@ class AppDelegate
 
 
     @window.makeKeyAndVisible
-    self.order = Order.new
-
     true 
   end 
 end

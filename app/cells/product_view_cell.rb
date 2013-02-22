@@ -13,6 +13,6 @@ class ProductViewCell < UITableViewCell
     self.product    = product
     self.name.text  = product.name
     self.price.text  = product.cost
-    self.picture.image = product.primary_image
+    self.picture.image = Product.to_image(product.image)
   end
 end

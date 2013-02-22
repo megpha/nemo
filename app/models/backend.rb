@@ -1,6 +1,7 @@
 class Backend
   attr_reader :backend
 
+
   def loadProducts(&blk)
     @backend.getObjectsAtPath("/products",
                               parameters: nil,
@@ -9,7 +10,7 @@ class Backend
   end
 
   def initialize
-    url = NSURL.URLWithString('http://nimbleshop-demo-simply.herokuapp.com')
+    url = NSURL.URLWithString(App.delegate.remote_url)
     @backend = RKObjectManager.managerWithBaseURL(url)
 
     add_response_mapping(product_mapping, "product")
