@@ -5,9 +5,13 @@ class ShowProductViewController < UITableViewController
   outlet :info, UILabel
   outlet :price, UILabel
   outlet :picture, UIImageView
+  ib_action :add_to_cart
+
   attr_accessor :product, :image_index
 
   def viewDidLoad
+    self.view.styleId = 'showProduct'
+
     self.name.text  = product.name
     self.info.text  = product.info
     self.price.text  = product.cost
@@ -19,6 +23,9 @@ class ShowProductViewController < UITableViewController
       next_image
       refresh_image
     end
+  end
+
+  def add_to_cart(sender)
   end
 
   private

@@ -14,4 +14,6 @@ Motion::Project::App.setup do |app|
   app.pods do
     pod 'RestKit', git: 'https://github.com/RestKit/RestKit.git', branch: 'development'
   end
+
+  app.pixate.framework = 'vendor/PXEngine.framework'
 end
