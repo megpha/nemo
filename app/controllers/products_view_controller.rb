@@ -32,8 +32,10 @@ class ProductsViewController < UITableViewController
   end
 
   def prepareForSegue(segue, sender:sender)
-    row = tableView.indexPathForSelectedRow
-    product = tableView.cellForRowAtIndexPath(row).product
-    segue.destinationViewController.product = product
+    unless segue.identifier == "showCart"
+      row = tableView.indexPathForSelectedRow
+      product = tableView.cellForRowAtIndexPath(row).product
+      segue.destinationViewController.product = product
+    end
   end
 end

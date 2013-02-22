@@ -38,6 +38,7 @@ class Backend
                                                  name: "name",
                                                  info: "info",
                                                  cost: "cost",
+                                                 price: "price",
                                                  images: "images",
                                                  image: "image")
     end
@@ -50,6 +51,7 @@ class Backend
       mapping.addAttributeMappingsFromDictionary(info: "info")
       mapping.addAttributeMappingsFromDictionary(image: "image")
       mapping.addAttributeMappingsFromDictionary(cost: "cost")
+      mapping.addAttributeMappingsFromDictionary(price: "price")
       mapping.addAttributeMappingsFromDictionary(images: "images")
     end
   end

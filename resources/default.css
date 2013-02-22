@@ -1,5 +1,9 @@
 #product-name {
-  color: #288de3;
+  font-family: "Open Sans";
+  font-size: 21px;
+}
+
+#product-price {
   font-family: "Open Sans";
   font-size: 17px;
   font-weight: bold;

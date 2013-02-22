@@ -1,4 +1,5 @@
 class AppDelegate
+  attr_accessor :order
   def application(application, didFinishLaunchingWithOptions:launchOptions)
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
 
@@ -9,6 +10,7 @@ class AppDelegate
 
 
     @window.makeKeyAndVisible
+    self.order = Order.new
 
     true 
   end 

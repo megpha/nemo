@@ -26,6 +26,7 @@ class ShowProductViewController < UITableViewController
   end
 
   def add_to_cart(sender)
+    App.delegate.order.add(product)
   end
 
   private
